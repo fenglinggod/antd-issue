@@ -1,0 +1,123 @@
+@import '~antd/lib/style/components.less';
+.homepage-search-tab {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: @container-max-width;
+  background-color: @gray-1;
+  box-shadow: @shadow-default;
+  border-radius: @border-radius-md;
+  position: relative;
+  z-index: 3;
+  input::placeholder {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  input {
+    font-size: 16px;
+    color: @gray-6;
+    font-weight: bold;
+  }
+  .ant-picker {
+    width: 100%;
+    height: 50px;
+  }
+  ul {
+    padding: 0px;
+    margin: 0px;
+  }
+  li {
+    list-style: none;
+  }
+
+  .radius-left-zero {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    .ant-select-selector,
+    .ant-input {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+
+  .radius-right-zero {
+    .ant-select-selector,
+    .ant-input {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .ant-input:focus,
+  .ant-input-focused {
+    border-color: @blue-6;
+  }
+
+  .ant-picker-focused {
+    border-color: @blue-6;
+    border-width: 2px !important;
+  }
+
+  > .ant-tabs {
+    overflow: visible;
+    > .ant-tabs-nav {
+      .ant-tabs-nav-wrap {
+        width: 100%;
+        .ant-tabs-nav-list {
+          width: 100%;
+          height: 56px;
+
+          .ant-tabs-tab {
+            height: 56px;
+            flex: auto;
+            text-align: center;
+            background-color: @gray-3;
+            font-size: @fz-16;
+            line-height: @lh-24;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            margin-right: 0px;
+          }
+
+          .ant-tabs-tab-active {
+            background-color: @gray-1;
+            font-weight: @weight-blod;
+          }
+
+          .ant-tabs-ink-bar {
+            top: 0px;
+            height: 4px;
+          }
+        }
+      }
+      .ant-tabs-nav-operations {
+        display: none;
+      }
+    }
+  }
+  // 航程搜索样式
+  .segment-search-wrap {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 40px 40px;
+  }
+
+  .ant-btn-primary {
+    &:hover {
+      &:not(.ant-btn-disabled) {
+        border-color: @accent-light;
+        background: @accent-light;
+        span,
+        i {
+          color: @gray-1;
+        }
+        span {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
